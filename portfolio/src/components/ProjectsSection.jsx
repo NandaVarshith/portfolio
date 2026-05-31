@@ -5,78 +5,87 @@ import SectionHeader from './SectionHeader'
 const FEATURED_PROJECTS = [
   {
     title: 'CineTrack',
-    tagline: 'AI movie watchlist and recommendation system',
+    tagline: 'AI movie watchlist system',
     description:
-      'A full stack movie platform that combines secure user workflows with AI-assisted recommendations and polished responsive UX.',
+      'An AI-powered platform that helps users discover, organize, and manage movies with personalized recommendations and a smooth full-stack experience.',
+    problem:
+      'Movie enthusiasts often struggle to organize watchlists and discover personalized recommendations in one place.',
+    approach:
+      'Built a full-stack application integrating LLaMA-3 to generate intelligent recommendations and insights while providing personalized watchlist management.',
+    result:
+      'Delivered an AI-powered movie management platform demonstrating full-stack architecture, LLM integration, and a more personalized user experience.',
     features: [
-      'AI-powered movie recommendations using LLaMA-3 through Groq integration.',
-      'Personalized watchlists with search, filtering, and progress management.',
-      'Secure JWT-based authentication and session-protected user data.',
-      'Production-oriented React (Vite) + Spring Boot + MongoDB architecture.',
+      'AI-powered movie recommendations with LLaMA-3 and Groq API integration.',
+      'Personalized watchlists for saving and tracking movies.',
+      'LLM-driven movie insights for a smarter discovery flow.',
     ],
-    tech: ['React (Vite)', 'Spring Boot', 'MongoDB', 'JWT Authentication', 'LLaMA-3 (Groq)'],
+    tech: ['React.js', 'Spring Boot', 'MongoDB', 'LLaMA-3', 'Groq API'],
     visualKey: 'cinetrack',
-    githubUrl: 'https://github.com/inandavarshith',
-    liveUrl: 'https://example.com',
+    githubUrl: 'https://github.com/NandaVarshith',
+    liveUrl: 'https://cine-track-alpha.vercel.app/',
   },
   {
     title: 'UrbanPulse',
-    tagline: 'Smart civic issue management platform',
+    tagline: 'Civic issue management platform',
     description:
-      'A civic-tech web platform designed for transparent issue tracking, governance workflows, and role-based operational visibility.',
+      'A civic-tech platform that lets citizens report issues and helps authorities manage, track, and resolve them through structured workflows.',
+    problem:
+      'Citizens need a clearer way to report civic issues and authorities need a structured workflow to track resolution.',
+    approach:
+      'Built role-based dashboards with JWT authentication, issue lifecycle management, and analytics features to organize the end-to-end process.',
+    result:
+      'Delivered a civic-tech platform focused on operational clarity, reporting visibility, and structured issue handling.',
     features: [
-      'Geo-tagged issue reporting with location-aware incident records.',
-      'Role-based dashboards for citizens, operators, and administrators.',
-      'Notification and workflow updates across the issue lifecycle.',
-      'Analytics modules for trend tracking and performance reporting.',
+      'Role-based access control for citizens and authorities.',
+      'Complaint lifecycle tracking from submission to resolution.',
+      'Analytics dashboard for issue trends and reporting.',
     ],
-    tech: ['MERN Stack', 'JWT Authentication', 'REST APIs', 'Analytics System'],
+    tech: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'JWT'],
     visualKey: 'urbanpulse',
-    githubUrl: 'https://github.com/inandavarshith',
-    liveUrl: 'https://example.com',
+    githubUrl: 'https://github.com/NandaVarshith',
+    liveUrl: null,
   },
   {
     title: 'Plant Species Classifier',
-    tagline: 'Deep learning based plant classification system',
+    tagline: 'Deep learning image classification app',
     description:
-      'A machine learning application that predicts plant species from images with optimized preprocessing and confidence-aware output.',
+      'A deep learning application that identifies plant species from leaf images with optimized preprocessing, model training, and API deployment.',
+    problem:
+      'Leaf-based plant classification benefits from a model that can generalize well while staying easy to deploy and test.',
+    approach:
+      'Handled preprocessing, model training, evaluation, and optimization using EfficientNetB3, then deployed the inference flow through Flask.',
+    result:
+      'Achieved approximately 97% validation accuracy using EfficientNetB3 and delivered a Flask-based prediction API.',
     features: [
-      'Achieved 97% validation accuracy using transfer learning strategy.',
-      'EfficientNetB3 model pipeline with image augmentation workflow.',
-      'Flask API integration for real-time prediction endpoints.',
-      'Top-3 class confidence scoring for transparent predictions.',
+      'Preprocessing, training, and evaluation pipeline for plant images.',
+      'Flask-based prediction API for deployment.',
+      'Built for transparent and practical model inference.',
     ],
-    tech: ['TensorFlow', 'EfficientNetB3', 'Flask API', 'CNN'],
+    tech: ['Python', 'TensorFlow', 'EfficientNetB3', 'Flask'],
     visualKey: 'plants',
-    githubUrl: 'https://github.com/inandavarshith',
-    liveUrl: 'https://example.com',
+    githubUrl: 'https://github.com/NandaVarshith',
+    liveUrl: null,
   },
 ]
 
-const SECONDARY_PROJECTS = [
+const LIVE_PROJECTS = [
   {
-    label: 'Secondary Project',
-    title: 'Full-Stack E-Commerce Platform',
-    description: 'Designed product flows, authentication, and checkout-ready architecture for scalable commerce journeys.',
-    tech: ['React', 'Node.js', 'MongoDB'],
-    githubUrl: 'https://github.com/inandavarshith',
-    liveUrl: 'https://example.com',
+    label: 'Live project',
+    title: 'Landmine Soft Website Revamp',
+    description:
+      'Assignment-based frontend redesign focused on responsive UI/UX, clearer hierarchy, and a more modern presentation.',
+    tech: ['React.js', 'UI/UX', 'Responsive Design'],
+    githubUrl: null,
+    liveUrl: 'https://landminesoft-4ev1.vercel.app/',
   },
   {
-    label: 'Secondary Project',
-    title: 'AgriConnect',
-    description: 'Built a digital platform connecting stakeholders with streamlined information sharing and service access.',
-    tech: ['React', 'Express.js', 'MongoDB'],
-    githubUrl: 'https://github.com/inandavarshith',
-    liveUrl: 'https://example.com',
-  },
-  {
-    label: 'Secondary Project',
-    title: 'Garbage Management System',
-    description: 'Implemented issue reporting, lifecycle tracking, and resolution visibility for cleaner civic operations.',
-    tech: ['MERN Stack', 'JWT', 'REST APIs'],
-    githubUrl: 'https://github.com/inandavarshith',
-    liveUrl: 'https://example.com',
+    label: 'Live project',
+    title: 'E-Commerce Platform',
+    description:
+      'A live e-commerce build focused on product presentation and a clean shopping flow.',
+    tech: ['React.js', 'Frontend Development', 'Responsive UI'],
+    githubUrl: null,
+    liveUrl: 'https://ecommerce-a7tp.vercel.app/',
   },
 ]
 
@@ -85,8 +94,8 @@ function ProjectsSection() {
     <section id="projects" className="section-shell py-24 md:py-28">
       <SectionHeader
         kicker="Projects"
-        title="Featured projects with strong full stack engineering outcomes."
-        description="Recruiter-focused highlights across product architecture, practical problem solving, and real-world functionality."
+        title="Case-study projects that show practical engineering, AI integration, and real product thinking."
+        description="Each project is framed around the problem, approach, stack, and result so the work reads like a product story."
       />
 
       <motion.div
@@ -107,14 +116,14 @@ function ProjectsSection() {
           viewport={{ once: true, amount: 0.25 }}
           transition={{ duration: 0.45 }}
         >
-          <p className="section-kicker">Secondary Projects</p>
+          <p className="section-kicker">Live work</p>
           <h3 className="mt-3 text-2xl font-semibold text-[var(--color-text-primary)] sm:text-3xl">
-            Additional builds across web and problem-focused platforms.
+            Additional live builds and product-facing work.
           </h3>
         </motion.div>
 
         <div className="mt-6 grid gap-4 md:grid-cols-2">
-          {SECONDARY_PROJECTS.map((project, index) => (
+          {LIVE_PROJECTS.map((project, index) => (
             <ProjectCard key={project.title} project={project} index={index} variant="compact" />
           ))}
         </div>

@@ -5,6 +5,7 @@ import ContactSection from './components/ContactSection'
 import EducationSection from './components/EducationSection'
 import ExperienceSection from './components/ExperienceSection'
 import Footer from './components/Footer'
+import HowIWorkSection from './components/HowIWorkSection'
 import Hero from './components/Hero'
 import Navbar from './components/Navbar'
 import ProjectsSection from './components/ProjectsSection'
@@ -15,14 +16,17 @@ function App() {
     <div className="relative min-h-screen overflow-x-hidden">
       <div className="pointer-events-none absolute inset-0 -z-10 bg-grid opacity-45" />
       <div className="pointer-events-none absolute inset-0 -z-10 bg-mesh" />
-      <div className="pointer-events-none absolute -left-36 top-20 -z-10 h-80 w-80 rounded-full bg-[var(--color-glow-cyan)] blur-[110px]" />
-      <div className="pointer-events-none absolute -right-20 top-56 -z-10 h-96 w-96 rounded-full bg-[var(--color-glow-purple)] blur-[140px]" />
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-noise" />
+      <div className="pointer-events-none absolute -left-32 top-16 -z-10 h-80 w-80 rounded-full bg-[var(--color-glow-cyan)] blur-[110px]" />
+      <div className="pointer-events-none absolute -right-24 top-52 -z-10 h-96 w-96 rounded-full bg-[var(--color-glow-purple)] blur-[145px]" />
+      <div className="pointer-events-none absolute inset-x-0 top-[22rem] -z-10 h-px bg-gradient-to-r from-transparent via-[rgba(230,183,107,0.35)] to-transparent" />
 
       <Navbar />
 
       <main>
         <Hero />
         <AboutSection />
+        <HowIWorkSection />
         <SkillsSection />
         <ProjectsSection />
         <ExperienceSection />

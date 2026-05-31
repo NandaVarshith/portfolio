@@ -4,23 +4,27 @@ import SectionHeader from './SectionHeader'
 const SKILL_GROUPS = [
   {
     title: 'Programming',
-    items: ['Java (OOP, DSA)', 'Python (Machine Learning)', 'JavaScript (ES6+)'],
+    items: ['Java', 'Python', 'JavaScript'],
   },
   {
-    title: 'Web Development',
-    items: ['HTML', 'CSS', 'React', 'Node.js', 'Express.js', 'REST APIs', 'JWT Authentication'],
+    title: 'Frontend',
+    items: ['React.js', 'HTML5', 'CSS3', 'Tailwind CSS', 'Bootstrap'],
   },
   {
-    title: 'Databases',
-    items: ['MongoDB', 'Oracle SQL'],
+    title: 'Backend',
+    items: ['Node.js', 'Express.js', 'REST APIs', 'JWT Authentication'],
+  },
+  {
+    title: 'Database',
+    items: ['MongoDB', 'MySQL', 'Oracle SQL'],
+  },
+  {
+    title: 'AI / ML',
+    items: ['Machine Learning', 'Deep Learning', 'CNNs', 'EfficientNet', 'LLM Integration', 'Flask'],
   },
   {
     title: 'Tools',
-    items: ['Git', 'GitHub', 'Postman', 'VS Code'],
-  },
-  {
-    title: 'AI/ML Exposure',
-    items: ['TensorFlow', 'CNN', 'EfficientNetB3', 'Flask APIs', 'LLaMA-3 Integration', 'Machine Learning Basics'],
+    items: ['Git', 'GitHub', 'Postman', 'VS Code', 'Vercel'],
   },
 ]
 
@@ -29,15 +33,15 @@ function SkillsSection() {
     <section id="skills" className="section-shell py-24 md:py-28">
       <SectionHeader
         kicker="Skills"
-        title="Technical toolkit for product-grade software development."
-        description="Strong foundations in full stack engineering, API-first development, and practical machine learning implementation."
+        title="A toolkit built for full-stack delivery and AI-enabled work."
+        description="My stack spans frontend polish, backend APIs, databases, and machine learning tools that support practical product development."
       />
 
       <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-2">
         {SKILL_GROUPS.map((group, index) => (
           <motion.article
             key={group.title}
-            className="glass-panel rounded-2xl p-5 sm:p-6"
+            className="glass-panel rounded-[1.6rem] p-5 sm:p-6"
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}

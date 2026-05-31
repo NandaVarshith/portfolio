@@ -7,30 +7,10 @@ const EXPERIENCES = [
     role: 'Frontend Developer Intern',
     company: 'Landmine Soft',
     points: [
-      'Redesigned the responsive company website with modern UI/UX patterns.',
-      'Conducted research on 15+ industry websites to inform implementation decisions.',
-      'Built reusable React components with clean, scalable frontend architecture.',
-      'Improved layout consistency, usability, and interaction quality across screens.',
-    ],
-  },
-  {
-    type: 'Virtual Internship',
-    role: 'ServiceNow Virtual Internship',
-    company: 'ServiceNow',
-    points: [
-      'Worked on ServiceNow administration fundamentals and platform workflows.',
-      'Practiced reporting modules and system-level configuration essentials.',
-      'Covered CSA-aligned concepts through guided labs and practical exercises.',
-    ],
-  },
-  {
-    type: 'Virtual Internship',
-    role: 'Cisco AICTE Virtual Internship',
-    company: 'Cisco',
-    points: [
-      'Strengthened networking fundamentals including routing and switching.',
-      'Worked with IP addressing and core network security concepts.',
-      'Used Cisco Packet Tracer for lab-based simulation and hands-on practice.',
+      'Redesigned the company website using React with a cleaner and more modern UI.',
+      'Improved the user experience through research-driven design decisions.',
+      'Built responsive interfaces that felt more polished and production-ready.',
+      'Focused on clear hierarchy, layout consistency, and usable frontend components.',
     ],
   },
 ]
@@ -40,18 +20,16 @@ function ExperienceSection() {
     <section id="experience" className="section-shell py-24 md:py-28">
       <SectionHeader
         kicker="Experience"
-        title="Internship experience focused on practical engineering delivery."
-        description="Hands-on exposure across frontend product development, platform workflows, and networking fundamentals."
+        title="Real frontend experience with a focus on design quality and execution."
+        description="My internship work centered on improving the website experience through better structure, responsiveness, and interface polish."
       />
 
       <div className="mt-12 space-y-6">
         {EXPERIENCES.map((experience, experienceIndex) => (
           <div key={experience.role} className="relative pl-8 sm:pl-10">
-            {experienceIndex !== EXPERIENCES.length - 1 ? (
-              <div className="absolute left-2 top-8 h-[calc(100%+24px)] w-px bg-gradient-to-b from-[var(--color-brand)]/60 via-[var(--color-brand)]/20 to-transparent sm:left-3" />
-            ) : null}
+            <div className="absolute left-2 top-8 h-[calc(100%+24px)] w-px bg-gradient-to-b from-[var(--color-brand)]/60 via-[var(--color-brand)]/20 to-transparent sm:left-3" />
             <motion.article
-              className="glass-panel relative rounded-2xl p-6 sm:p-7"
+              className="glass-panel relative rounded-[1.6rem] p-6 sm:p-7"
               initial={{ opacity: 0, y: 18 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.25 }}

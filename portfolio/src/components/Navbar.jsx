@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from 'react'
 const NAV_LINKS = [
   { label: 'Home', href: '#home' },
   { label: 'About', href: '#about' },
+  { label: 'Process', href: '#process' },
   { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
   { label: 'Experience', href: '#experience' },
@@ -84,17 +85,23 @@ function Navbar() {
     >
       <nav
         className={[
-          'mx-auto flex h-16 max-w-6xl items-center justify-between rounded-2xl border px-4 transition-all md:px-6',
+          'mx-auto flex max-w-6xl items-center justify-between gap-3 rounded-[1.5rem] border px-4 py-3 transition-all md:px-5',
           isScrolled
-            ? 'border-[var(--color-border-strong)] bg-[var(--color-surface-soft)]/90 shadow-[0_24px_64px_-30px_rgba(15,23,42,0.9)] backdrop-blur-xl'
-            : 'border-transparent bg-transparent',
+            ? 'border-[var(--color-border-strong)] bg-[var(--color-surface-soft)]/90 shadow-[0_28px_60px_-32px_rgba(3,5,10,0.94)] backdrop-blur-xl'
+            : 'border-[rgba(255,255,255,0.03)] bg-[rgba(7,9,14,0.32)] backdrop-blur-xl',
         ].join(' ')}
       >
-        <a className="text-sm font-semibold tracking-wide text-[var(--color-text-primary)] md:text-base" href="#home">
-          Nanda Varshith
+        <a className="flex items-center gap-3" href="#home" aria-label="Go to home section">
+          <span className="flex h-10 w-10 items-center justify-center rounded-2xl border border-[var(--color-border-strong)] bg-[linear-gradient(135deg,rgba(230,183,107,0.22),rgba(73,206,191,0.12))] text-sm font-bold text-[var(--color-text-primary)]">
+            NV
+          </span>
+          <span className="hidden sm:block">
+            <span className="block text-sm font-semibold tracking-wide text-[var(--color-text-primary)]">Nanda Varshith</span>
+            <span className="block text-[11px] uppercase tracking-[0.22em] text-[var(--color-text-dim)]">AI & Full-Stack Developer</span>
+          </span>
         </a>
 
-        <div className="hidden items-center gap-2 rounded-full border border-[var(--color-border-soft)] bg-[var(--color-surface-soft)]/70 px-2 py-1 backdrop-blur-lg lg:flex">
+        <div className="hidden items-center gap-2 rounded-full border border-[var(--color-border-soft)] bg-[var(--color-surface)]/70 px-2 py-1 backdrop-blur-lg lg:flex">
           {NAV_LINKS.map((item) => {
             const sectionId = item.href.replace('#', '')
             const isActive = activeSection === sectionId
@@ -122,7 +129,7 @@ function Navbar() {
           </a>
           <a
             className="icon-btn"
-            href="https://github.com/inandavarshith"
+            href="https://github.com/NandaVarshith"
             target="_blank"
             rel="noreferrer"
             aria-label="GitHub profile"
@@ -131,7 +138,7 @@ function Navbar() {
           </a>
           <a
             className="icon-btn"
-            href="https://linkedin.com/in/inandavarshith"
+            href="https://linkedin.com/in/nanda-varshith-inupamula-02b092315"
             target="_blank"
             rel="noreferrer"
             aria-label="LinkedIn profile"
@@ -159,7 +166,7 @@ function Navbar() {
         {isMobileOpen ? (
           <motion.div
             id="mobile-menu"
-            className="mt-3 rounded-2xl border border-[var(--color-border-strong)] bg-[var(--color-surface-soft)]/95 p-3 shadow-[0_20px_70px_-30px_rgba(11,17,32,0.95)] backdrop-blur-xl lg:hidden"
+            className="mt-3 rounded-[1.5rem] border border-[var(--color-border-strong)] bg-[var(--color-surface-soft)]/96 p-3 shadow-[0_24px_70px_-34px_rgba(3,5,10,0.96)] backdrop-blur-xl lg:hidden"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
@@ -175,7 +182,7 @@ function Navbar() {
                   href={item.href}
                   onClick={onNavClick}
                   className={[
-                    'block rounded-xl px-3 py-3 text-sm transition',
+                    'block rounded-2xl px-3 py-3 text-sm transition',
                     isActive
                       ? 'bg-[var(--color-surface-strong)] text-[var(--color-text-primary)]'
                       : 'text-[var(--color-text-muted)] hover:bg-[var(--color-surface)] hover:text-[var(--color-text-primary)]',
@@ -185,28 +192,31 @@ function Navbar() {
                 </a>
               )
             })}
-            <div className="mt-3 flex items-center gap-2 border-t border-[var(--color-border-soft)] pt-3">
-              <a className="btn btn-secondary h-10 flex-1 justify-center text-sm" href="/resume.pdf" download onClick={onNavClick}>
+
+            <div className="mt-3 grid gap-2 border-t border-[var(--color-border-soft)] pt-3">
+              <a className="btn btn-secondary h-11 justify-center text-sm" href="/resume.pdf" download onClick={onNavClick}>
                 Resume
               </a>
-              <a
-                className="icon-btn"
-                href="https://github.com/inandavarshith"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="GitHub profile"
-              >
-                <GitHubIcon />
-              </a>
-              <a
-                className="icon-btn"
-                href="https://linkedin.com/in/inandavarshith"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="LinkedIn profile"
-              >
-                <LinkedInIcon />
-              </a>
+              <div className="flex items-center gap-2">
+                <a
+                  className="icon-btn"
+                  href="https://github.com/NandaVarshith"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="GitHub profile"
+                >
+                  <GitHubIcon />
+                </a>
+                <a
+                  className="icon-btn"
+                  href="https://linkedin.com/in/nanda-varshith-inupamula-02b092315"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="LinkedIn profile"
+                >
+                  <LinkedInIcon />
+                </a>
+              </div>
             </div>
           </motion.div>
         ) : null}

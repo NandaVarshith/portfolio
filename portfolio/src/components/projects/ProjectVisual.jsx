@@ -2,19 +2,19 @@ import { motion } from 'framer-motion'
 
 const VISUAL_STYLES = {
   cinetrack: {
-    gradient: 'from-[#1d2f57] via-[#1b3d6f] to-[#35245f]',
+    gradient: 'from-[#1a2234] via-[#24314a] to-[#432d3f]',
     chip: 'AI Recs',
     lineOne: 'Personal Watchlist',
     lineTwo: 'Smart Similar Picks',
   },
   urbanpulse: {
-    gradient: 'from-[#1f2a45] via-[#244560] to-[#2e3e66]',
+    gradient: 'from-[#172230] via-[#22344a] to-[#31455a]',
     chip: 'Geo Insights',
     lineOne: 'Role-Based Dashboards',
     lineTwo: 'Issue Heatmap + Analytics',
   },
   plants: {
-    gradient: 'from-[#1f3141] via-[#204959] to-[#2d395f]',
+    gradient: 'from-[#182734] via-[#203f4b] to-[#32435d]',
     chip: 'EfficientNetB3',
     lineOne: 'Image Classification',
     lineTwo: 'Flask Prediction API',
@@ -26,6 +26,8 @@ function ProjectVisual({ visualKey, title }) {
 
   return (
     <div className={`relative h-56 overflow-hidden rounded-2xl border border-[var(--color-border-soft)] bg-gradient-to-br ${style.gradient} p-5 sm:h-64`}>
+      <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.06),transparent_30%,transparent_70%,rgba(255,255,255,0.04))]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(230,183,107,0.14),transparent_18%),radial-gradient(circle_at_80%_70%,rgba(73,206,191,0.12),transparent_20%)]" />
       <motion.div
         className="pointer-events-none absolute -left-14 -top-10 h-28 w-28 rounded-full bg-[var(--color-glow-cyan)] blur-[42px]"
         animate={{ x: [0, 10, 0], y: [0, 8, 0] }}
@@ -38,12 +40,12 @@ function ProjectVisual({ visualKey, title }) {
       />
 
       <motion.div
-        className="relative h-full rounded-xl border border-white/15 bg-[rgba(8,16,34,0.55)] p-4 backdrop-blur"
+        className="relative h-full rounded-xl border border-white/15 bg-[rgba(10,13,21,0.55)] p-4 backdrop-blur"
         whileHover={{ scale: 1.02 }}
         transition={{ duration: 0.3 }}
       >
         <div className="flex items-center justify-between">
-          <p className="text-xs uppercase tracking-[0.16em] text-[#d7e3ff]/80">{title}</p>
+          <p className="text-xs uppercase tracking-[0.16em] text-[#f5ede1]/80">{title}</p>
           <span className="rounded-full border border-white/20 bg-white/10 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-white/85">
             {style.chip}
           </span>

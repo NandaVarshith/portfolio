@@ -1,102 +1,47 @@
-import { motion, useInView } from 'framer-motion'
-import { useEffect, useRef, useState } from 'react'
+import { motion } from 'framer-motion'
 import SectionHeader from './SectionHeader'
 
-const ACHIEVEMENTS = [
+const HIGHLIGHTS = [
   {
-    value: 300,
-    suffix: '+',
-    label: 'DSA Problems Solved',
-    detail: 'Strong consistency across core data structures and algorithms.',
+    title: 'Built full-stack applications with AI features',
+    description:
+      'Created projects that combine modern web development with LLaMA-3, Groq API integration, and practical user flows.',
   },
   {
-    value: 125,
-    suffix: '+',
-    label: 'LeetCode Questions',
-    detail: 'Focused practice on interview-grade problem patterns.',
+    title: 'Maintained a 9.0 CGPA while staying active in technical programs',
+    description:
+      'Balanced academics with hackathons, structured problem-solving, and certification-based learning across software and data topics.',
   },
   {
-    value: 4,
-    suffix: 'th',
-    label: 'College Hackathon Rank',
-    detail: 'Achieved top placement through rapid execution and teamwork.',
-  },
-  {
-    value: 1,
-    suffix: '',
-    label: 'Smart Interview DSA Completion',
-    detail: 'Completed structured DSA preparation with disciplined progress.',
-  },
-  {
-    value: 5,
-    suffix: '+',
-    label: 'Full Stack Projects Built',
-    detail: 'Built practical end-to-end applications with product focus.',
+    title: 'Solved 300+ DSA problems and completed Smart Interview training',
+    description:
+      'Kept a strong focus on core problem solving, interview preparation, and clean algorithmic thinking.',
   },
 ]
-
-function CounterValue({ value, suffix }) {
-  const [count, setCount] = useState(0)
-  const nodeRef = useRef(null)
-  const isInView = useInView(nodeRef, { once: true, amount: 0.7 })
-
-  useEffect(() => {
-    if (!isInView) {
-      return
-    }
-
-    let frameId
-    const duration = 1100
-    const start = performance.now()
-
-    const animate = (now) => {
-      const elapsed = now - start
-      const progress = Math.min(elapsed / duration, 1)
-      setCount(Math.round(value * progress))
-
-      if (progress < 1) {
-        frameId = requestAnimationFrame(animate)
-      }
-    }
-
-    frameId = requestAnimationFrame(animate)
-    return () => cancelAnimationFrame(frameId)
-  }, [isInView, value])
-
-  return (
-    <span ref={nodeRef}>
-      {count}
-      {suffix}
-    </span>
-  )
-}
 
 function AchievementsSection() {
   return (
     <section id="achievements" className="section-shell py-24 md:py-28">
       <SectionHeader
-        kicker="Achievements"
-        title="Technical consistency backed by measurable problem-solving outcomes."
-        description="Focused progress across coding practice, project implementation, and competitive execution."
+        kicker="Selected Highlights"
+        title="A few proof points that tell the story better than counters."
+        description="These highlights focus on the work, learning, and consistency behind the portfolio."
       />
 
-      <div className="mt-12 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-        {ACHIEVEMENTS.map((item, index) => (
+      <div className="mt-12 grid gap-4 lg:grid-cols-3">
+        {HIGHLIGHTS.map((item, index) => (
           <motion.article
-            key={item.label}
-            className="glass-panel group relative overflow-hidden rounded-2xl p-5 sm:p-6"
+            key={item.title}
+            className="glass-panel rounded-[1.6rem] p-6 sm:p-7"
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.45, delay: index * 0.07 }}
+            transition={{ duration: 0.45, delay: index * 0.08 }}
             whileHover={{ y: -4 }}
           >
-            <div className="absolute inset-0 -z-10 rounded-2xl bg-[radial-gradient(circle_at_top_right,rgba(124,168,255,0.2),transparent_60%)] opacity-0 blur-2xl transition-opacity duration-300 group-hover:opacity-100" />
-            <p className="text-4xl font-semibold tracking-tight text-[var(--color-text-primary)] sm:text-5xl">
-              <CounterValue value={item.value} suffix={item.suffix} />
-            </p>
-            <p className="mt-3 text-base font-medium text-[var(--color-text-primary)]">{item.label}</p>
-            <p className="mt-2 text-sm text-[var(--color-text-muted)]">{item.detail}</p>
+            <p className="text-xs uppercase tracking-[0.2em] text-[var(--color-brand-strong)]">Highlight</p>
+            <h3 className="mt-3 text-2xl font-semibold text-[var(--color-text-primary)]">{item.title}</h3>
+            <p className="mt-4 text-sm leading-relaxed text-[var(--color-text-muted)]">{item.description}</p>
           </motion.article>
         ))}
       </div>

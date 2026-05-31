@@ -1,23 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap');
 @import 'tailwindcss';
 
 :root {
-  --color-bg: #040811;
-  --color-bg-soft: #0a1222;
-  --color-surface: #0b1426;
-  --color-surface-soft: #111d31;
-  --color-surface-strong: #172339;
-  --color-text-primary: #f6f8ff;
-  --color-text-muted: #bac8e5;
-  --color-text-dim: #8da0c5;
-  --color-border-soft: rgba(174, 194, 235, 0.14);
-  --color-border-strong: rgba(192, 210, 248, 0.25);
-  --color-glow-cyan: rgba(56, 189, 248, 0.38);
-  --color-glow-purple: rgba(126, 87, 255, 0.35);
-  --color-brand: #7ca8ff;
-  --color-brand-strong: #95b4ff;
-  --font-heading: 'Outfit', sans-serif;
-  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --color-bg: #06070b;
+  --color-bg-soft: #0b0e16;
+  --color-surface: #111520;
+  --color-surface-soft: #171c2b;
+  --color-surface-strong: #20263a;
+  --color-text-primary: #f6f1e8;
+  --color-text-muted: #c5bcae;
+  --color-text-dim: #918877;
+  --color-border-soft: rgba(225, 207, 181, 0.1);
+  --color-border-strong: rgba(230, 183, 107, 0.28);
+  --color-glow-cyan: rgba(73, 206, 191, 0.22);
+  --color-glow-purple: rgba(228, 144, 96, 0.24);
+  --color-brand: #e6b76b;
+  --color-brand-strong: #f4cf92;
+  --font-heading: 'Sora', sans-serif;
+  --font-body: 'Manrope', sans-serif;
 }
 
 @layer base {
@@ -27,7 +27,10 @@
 
   body {
     margin: 0;
-    background: var(--color-bg);
+    background:
+      radial-gradient(50rem 32rem at 15% 0%, rgba(230, 183, 107, 0.1), transparent 60%),
+      radial-gradient(44rem 30rem at 85% 10%, rgba(73, 206, 191, 0.08), transparent 58%),
+      linear-gradient(180deg, #090b11 0%, #06070b 52%, #05060a 100%);
     color: var(--color-text-muted);
     font-family: var(--font-body);
     text-rendering: optimizeLegibility;
@@ -39,7 +42,7 @@
   }
 
   section {
-    scroll-margin-top: 7.25rem;
+    scroll-margin-top: 7.5rem;
   }
 
   h1,
@@ -50,16 +53,16 @@
   h6 {
     color: var(--color-text-primary);
     font-family: var(--font-heading);
-    font-weight: 600;
+    font-weight: 700;
   }
 
   p {
-    line-height: 1.72;
+    line-height: 1.75;
   }
 
   ::selection {
-    background: rgba(124, 168, 255, 0.3);
-    color: #ffffff;
+    background: rgba(230, 183, 107, 0.35);
+    color: #fff7ec;
   }
 
   ::-webkit-scrollbar {
@@ -72,13 +75,13 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, rgba(124, 168, 255, 0.65), rgba(122, 96, 244, 0.65));
+    background: linear-gradient(180deg, rgba(230, 183, 107, 0.75), rgba(73, 206, 191, 0.55));
     border-radius: 999px;
     border: 2px solid var(--color-bg);
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, rgba(149, 180, 255, 0.78), rgba(143, 122, 247, 0.75));
+    background: linear-gradient(180deg, rgba(244, 207, 146, 0.8), rgba(73, 206, 191, 0.7));
   }
 }
 
@@ -88,11 +91,11 @@
   }
 
   .section-kicker {
-    @apply text-xs font-semibold uppercase tracking-[0.18em] text-[var(--color-brand-strong)] md:text-sm;
+    @apply text-xs font-semibold uppercase tracking-[0.3em] text-[var(--color-brand-strong)] md:text-sm;
   }
 
   .section-title {
-    @apply text-balance text-3xl leading-tight tracking-[-0.02em] text-[var(--color-text-primary)] sm:text-4xl md:text-5xl;
+    @apply text-balance text-3xl leading-tight tracking-[-0.04em] text-[var(--color-text-primary)] sm:text-4xl md:text-5xl;
     font-family: var(--font-heading);
   }
 
@@ -101,11 +104,11 @@
   }
 
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-xl border px-5 font-semibold tracking-wide transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-brand)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-bg)];
+    @apply inline-flex items-center justify-center gap-2 rounded-full border px-5 font-semibold tracking-wide transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-brand)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-bg)];
   }
 
   .btn-primary {
-    @apply border-transparent bg-[var(--color-brand)] text-[#061124] hover:-translate-y-0.5 hover:bg-[var(--color-brand-strong)] hover:shadow-[0_16px_36px_-18px_rgba(124,168,255,0.8)];
+    @apply border-transparent bg-[var(--color-brand)] text-[#181106] hover:-translate-y-0.5 hover:bg-[var(--color-brand-strong)] hover:shadow-[0_18px_38px_-18px_rgba(230,183,107,0.82)];
   }
 
   .btn-secondary {
@@ -117,19 +120,19 @@
   }
 
   .icon-btn {
-    @apply relative inline-flex h-10 w-10 items-center justify-center rounded-xl border border-[var(--color-border-soft)] bg-[var(--color-surface-soft)]/70 text-[var(--color-text-muted)] transition hover:-translate-y-0.5 hover:border-[var(--color-border-strong)] hover:bg-[var(--color-surface-strong)] hover:text-[var(--color-text-primary)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-brand)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-bg)];
+    @apply relative inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--color-border-soft)] bg-[var(--color-surface-soft)]/75 text-[var(--color-text-muted)] transition hover:-translate-y-0.5 hover:border-[var(--color-border-strong)] hover:bg-[var(--color-surface-strong)] hover:text-[var(--color-text-primary)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-brand)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-bg)];
   }
 
   .glass-panel {
-    @apply border border-[var(--color-border-soft)] bg-[var(--color-surface-soft)]/55 backdrop-blur-xl shadow-[0_20px_60px_-35px_rgba(5,10,20,0.95)];
+    @apply border border-[var(--color-border-soft)] bg-[var(--color-surface-soft)]/62 backdrop-blur-xl shadow-[0_28px_70px_-40px_rgba(4,7,13,0.96)];
   }
 
   .skill-badge {
-    @apply inline-flex rounded-full border border-[var(--color-border-strong)] bg-[var(--color-surface)]/75 px-3 py-1 text-sm font-medium text-[var(--color-text-primary)] transition hover:border-[var(--color-brand)] hover:text-white;
+    @apply inline-flex rounded-full border border-[var(--color-border-strong)] bg-[var(--color-surface)]/82 px-3 py-1 text-sm font-medium text-[var(--color-text-primary)] transition hover:border-[var(--color-brand)] hover:text-white;
   }
 
   .form-input {
-    @apply rounded-xl border border-[var(--color-border-soft)] bg-[var(--color-surface)]/65 px-4 py-3 text-sm text-[var(--color-text-primary)] placeholder:text-[var(--color-text-dim)] transition focus:border-[var(--color-brand)] focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)]/25;
+    @apply rounded-2xl border border-[var(--color-border-soft)] bg-[var(--color-surface)]/72 px-4 py-3 text-sm text-[var(--color-text-primary)] placeholder:text-[var(--color-text-dim)] transition focus:border-[var(--color-brand)] focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)]/25;
   }
 
   .menu-line {
@@ -147,15 +150,24 @@
 
 .bg-mesh {
   background:
-    radial-gradient(42rem 26rem at 8% -6%, rgba(72, 138, 255, 0.24), transparent 70%),
-    radial-gradient(34rem 24rem at 82% 12%, rgba(95, 97, 255, 0.22), transparent 70%),
-    radial-gradient(28rem 20rem at 50% 104%, rgba(54, 98, 196, 0.18), transparent 70%),
-    linear-gradient(180deg, var(--color-bg-soft) 0%, var(--color-bg) 52%, #04070f 100%);
+    radial-gradient(42rem 26rem at 12% -8%, rgba(230, 183, 107, 0.14), transparent 70%),
+    radial-gradient(34rem 24rem at 80% 8%, rgba(73, 206, 191, 0.12), transparent 70%),
+    radial-gradient(28rem 20rem at 50% 104%, rgba(228, 144, 96, 0.08), transparent 70%),
+    linear-gradient(180deg, var(--color-bg-soft) 0%, var(--color-bg) 50%, #040407 100%);
 }
 
 .bg-grid {
   background-image:
-    linear-gradient(to right, rgba(160, 178, 215, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(160, 178, 215, 0.05) 1px, transparent 1px);
+    linear-gradient(to right, rgba(213, 196, 175, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(213, 196, 175, 0.04) 1px, transparent 1px);
   background-size: 34px 34px;
+}
+
+.bg-noise {
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.02) 0 1px, transparent 1px),
+    radial-gradient(circle at 80% 35%, rgba(255, 255, 255, 0.02) 0 1px, transparent 1px);
+  background-size: 14px 14px;
+  mix-blend-mode: soft-light;
+  opacity: 0.55;
 }

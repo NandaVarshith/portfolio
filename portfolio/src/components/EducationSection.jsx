@@ -8,8 +8,8 @@ function EducationSection() {
     <section id="education" className="section-shell py-24 md:py-28">
       <SectionHeader
         kicker="Education"
-        title="Academic journey with strong computer science fundamentals."
-        description="Consistent performance in engineering academics supported by practical software development implementation."
+        title="Computer science foundations with a strong practical focus."
+        description="I'm currently pursuing B.Tech in Computer Science while building projects that connect theory to real applications."
       />
 
       <motion.article
@@ -26,18 +26,18 @@ function EducationSection() {
               Bachelor of Technology in Computer Science
             </h3>
             <p className="mt-4 text-sm text-[var(--color-text-muted)] sm:text-base">
-              Duration: Dec 2023 - Present. Current status: 3rd Year, 2nd Semester with continued focus on software engineering and scalable web systems.
+              Hyderabad, India. Focused on software engineering, AI/ML, and the foundations needed to build scalable systems.
             </p>
           </div>
 
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
             <div className="rounded-2xl border border-[var(--color-border-soft)] bg-[var(--color-surface)]/60 p-4">
-              <p className="text-xs uppercase tracking-[0.14em] text-[var(--color-text-dim)]">CGPA</p>
-              <p className="mt-2 text-3xl font-semibold text-[var(--color-text-primary)]">9.0</p>
+              <p className="text-xs uppercase tracking-[0.14em] text-[var(--color-text-dim)]">Academic Focus</p>
+              <p className="mt-2 text-lg font-semibold text-[var(--color-text-primary)]">Software engineering + AI</p>
             </div>
             <div className="rounded-2xl border border-[var(--color-border-soft)] bg-[var(--color-surface)]/60 p-4">
-              <p className="text-xs uppercase tracking-[0.14em] text-[var(--color-text-dim)]">Academic Stage</p>
-              <p className="mt-2 text-lg font-semibold text-[var(--color-text-primary)]">3rd Year, 2nd Semester</p>
+              <p className="text-xs uppercase tracking-[0.14em] text-[var(--color-text-dim)]">Current Strength</p>
+              <p className="mt-2 text-lg font-semibold text-[var(--color-text-primary)]">Practical product building</p>
             </div>
           </div>
         </div>
