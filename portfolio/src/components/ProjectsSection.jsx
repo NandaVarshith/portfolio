@@ -21,7 +21,7 @@ const FEATURED_PROJECTS = [
     ],
     tech: ['React.js', 'Spring Boot', 'MongoDB', 'LLaMA-3', 'Groq API'],
     visualKey: 'cinetrack',
-    githubUrl: 'https://github.com/NandaVarshith',
+    githubUrl: null,
     liveUrl: 'https://cine-track-alpha.vercel.app/',
   },
   {
@@ -42,7 +42,7 @@ const FEATURED_PROJECTS = [
     ],
     tech: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'JWT'],
     visualKey: 'urbanpulse',
-    githubUrl: 'https://github.com/NandaVarshith',
+    githubUrl: null,
     liveUrl: null,
   },
   {
@@ -63,7 +63,7 @@ const FEATURED_PROJECTS = [
     ],
     tech: ['Python', 'TensorFlow', 'EfficientNetB3', 'Flask'],
     visualKey: 'plants',
-    githubUrl: 'https://github.com/NandaVarshith',
+    githubUrl: null,
     liveUrl: null,
   },
 ]
